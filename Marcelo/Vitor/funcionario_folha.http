@@ -1,0 +1,34 @@
+
+# FUNCIONÁRIO ######################################
+
+### Criar novo funcionario
+POST http://localhost:5187/api/funcionario/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Roberto",
+    "cpf" : "12345678901"
+}
+
+### Obtenção de todos os funcionários
+GET http://localhost:5187/api/funcionario/listar
+
+# FOLHA ############################################
+
+### Criação de uma nova folha
+POST http://localhost:5187/api/folha/cadastrar
+Content-Type: application/json
+
+{
+    "valor": 50,
+    "quantidade" : 1000,
+    "mes" : 10,
+    "ano" : 2023,
+    "funcionarioId" : 1
+}
+
+### Obtenção de todas as folhas
+GET http://localhost:5187/api/folha/listar
+
+### Obtenção de uma folha
+GET http://localhost:5187/api/folha/buscar/12345678912/10/2023
